@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+ <ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+ <LinearLayout 
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >   
+ <TextView 
+     android:id="@+id/info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:text="hello"
+     />
+    
+<Button 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="testCfg"
+    android:onClick="testCfg"
+    />
+<Button 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="testActivity"
+    android:onClick="testActivity"
+    />
+<Button 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="testThread"
+    android:onClick="testThread"
+    />
+
+<Button 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="testsentor"
+    android:onClick="testSentor"
+    />
+<Button 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="testIntent"
+    android:onClick="testIntent"
+    />
+
+<Button 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="testResources"
+    android:onClick="testResources"
+    />
+<Button 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="android组件"
+    android:onClick="testView"
+    />
+<Button 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="网络操作"
+    android:onClick="testNet"
+    />
+<Button 
+     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="phoneGap"
+    android:onClick="testHtml"
+    />
+<Button 
+     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="NFC"
+    android:onClick="testNfc"
+    />
+
+<Button 
+     android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="sqllite"
+    android:onClick="testDb"
+    />
+</LinearLayout> 
+ </ScrollView>
+</LinearLayout>

@@ -1,0 +1,17 @@
+body {
+color:red;
+backgroud-color:#000000;
+font-size:12px;
+font-style:italic;
+font-weight:bold;
+font-family:Arial;
+}
+
+h1 a {font-style:italic;}
+
+#container {
+    
+    color:blue;
+    font-size:20px;
+    font-family: Arial;
+}

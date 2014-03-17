@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Main-Class: com.paipai.api.sdk.TestOpenApiV3
+Class-Path: commons-httpclient-3.1.jar
+Class-Path: commons-logging-1.1.1.jar
+Class-Path: httpclient-4.0.1.jar
+Class-Path: httpclient-4.2-beta1.jar
+Class-Path: httpcore-4.0.1.jar
+Class-Path: junit-4.8.1.jar
+

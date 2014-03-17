@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_gravity="center">
+
+  <Button 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="自定义资源"
+     android:onClick="resource"
+     />
+ <Button 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="xml动画"
+     android:onClick="animation"
+     />
+ <Button 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="解析xml文件"
+     android:onClick="xmlTest"
+     />
+ <Button 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="自定义xml菜单"
+     android:onClick="xmlmenu"
+     />
+ <Button 
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="使用其它资源"
+     android:onClick="showOther"
+     />
+</LinearLayout>

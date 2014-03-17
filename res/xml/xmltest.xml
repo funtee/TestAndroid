@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+<book price="50" 出版日期="2013/06/01">android</book>    
+<book price="60" 出版日期="2013/06/05">java</book>  
+</books>

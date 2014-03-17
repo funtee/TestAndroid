@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <array name="color_ary">
+     <item>@color/write</item>
+      <item>@color/black</item>
+       <item>@color/blue</item>   
+ </array> 
+ <string-array name="books">
+     <item>html5游戏速成</item>
+      <item>java从入门到精通</item>
+       <item>深入php</item>
+ </string-array>   
+</resources>

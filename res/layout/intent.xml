@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/showinfo"
+      />  
+ <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/showcomponent"
+      />   
+ <Button 
+     android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="启动自定义action"
+      android:onClick="action"
+     />
+ <Button 
+     android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="启动ViewAction"
+      android:onClick="actionView"
+     />  
+     <Button 
+     android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="回到手机桌面"
+      android:onClick="actionHome"
+     />       
+</LinearLayout>

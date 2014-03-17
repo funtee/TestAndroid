@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/ori"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+    
+    <TextView
+        android:id="@+id/nav"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" /> 
+    <TextView
+        android:id="@+id/touch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+     <TextView
+        android:id="@+id/screen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+       <TextView
+        android:id="@+id/local"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+       <Button  
+          android:id="@+id/bt"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:onClick="function"
+           />
+       <Button  
+          android:id="@+id/bt1"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:onClick="changeCfg"
+          android:text="changeCfg"
+           />
+      
+       <Button  
+          android:id="@+id/bt2"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:onClick="TestActivity"
+          android:text="TestActivity"
+           />
+</LinearLayout>

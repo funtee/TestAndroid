@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <group 
+       android:checkableBehavior="single">
+        <item 
+            android:id="@+id/red"
+            android:title="红"
+            android:alphabeticShortcut="r"
+            />
+                <item 
+            android:id="@+id/yellow"
+            android:title="黄"
+            android:alphabeticShortcut="y"
+            />
+                 <item 
+            android:id="@+id/blue"
+            android:title="蓝"
+            android:alphabeticShortcut="b"
+            />       
+        
+        
+    </group>
+
+</menu>

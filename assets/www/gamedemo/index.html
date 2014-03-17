@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>与众不同</title>
+   <link rel="stylesheet" type="text/css" href="css/different.css" />
+
+   <script type="text/javascript" src="js/jquery.js"></script>   
+   <script type="text/javascript">
+	window.onload=function()
+	{
+	}
+	
+	function getRandomNum(min,max)
+	{
+	 var range = max - min;
+	 var rand = Math.random();
+	 return (min + Math.round(rand * range));
+	}
+	
+	function play()
+	{
+		var page = "";
+		page += getRandomNum(1,50)+".html";
+		window.location.loadhrefaction="ts_mover_right_to_left";
+		window.location = page;		
+	}
+	
+	function f()
+	{
+	 self.close();
+	} 
+	document.onkeysoft2 = f;		
+	
+   </script>   
+      
+ </head>
+ <body>
+<div class="different">
+	<div class="diff">
+		<a href="javascript:void(0);" class="play" onclick="play()"></a>
+	</div>
+</div>
+
+  </body>
+</html>

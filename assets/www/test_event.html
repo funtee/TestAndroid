@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Event Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("online", onOnline, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Now safe to use device APIs
+        document.addEventListener("pause", onPause, false);
+        document.addEventListener("resume", onResume, false);
+        document.addEventListener("offline", onOffline, false);
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+        document.addEventListener("searchbutton", onSearchKeyDown, false);
+        document.addEventListener("startcallbutton", onStartCallKeyDown, false);
+        document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
+        window.addEventListener("batterycritical", onBatteryCritical, false);
+        window.addEventListener("batterylow", onBatteryLow, false);
+         window.addEventListener("batterystatus", onBatteryStatus, false);
+    }
+    
+     // Handle the pause event
+    //
+    function onPause() {
+        alert("event is onPause");
+    }
+    // Handle the resume event
+    //
+    function onResume() {
+         alert("event is onResume");
+    }
+    
+    // Handle the online event
+    //
+    function onOnline() {
+         alert("event is onLine");
+    }
+     // Handle the offline event
+    //
+    function onOffline() {
+        alert("event is onOffline");
+    }
+     // Handle the menu button
+    //
+    function onMenuKeyDown() {
+          alert("event is onMenuKeyDown");
+    }
+    // Handle the start call button
+    //
+    function onStartCallKeyDown() {
+         alert("event is onStartCallKeyDown");
+    }
+    // Handle the batterycritical event
+    //
+    function onBatteryCritical(info) {
+        alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+    }
+    // Handle the batterylow event
+    //
+    function onBatteryLow(info) {
+        alert("Battery Level Low " + info.level + "%");
+    }
+     // Handle the batterystatus event
+    //
+    function onBatteryStatus(info) {
+        console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+    }
+    // Handle the search button
+    //
+    function onSearchKeyDown() {
+         alert("event is onSearchKeyDown");
+    }
+    
+    // Handle the end call button
+    //
+    function onEndCallKeyDown() {
+         alert("event is onEndCallKeyDown");
+    }
+    // Handle the volume down button
+    //
+    function onVolumeDownKeyDown() {
+        alert("event is onVolumeDownKeyDown");
+    }
+    // Handle the volume up button
+    //
+    function onVolumeUpKeyDown() {
+        alert("event is onVolumeUpKeyDown");
+    }
+
+  </script>
+  </head>
+  <body onload="onLoad()">
+  </body>
+</html>

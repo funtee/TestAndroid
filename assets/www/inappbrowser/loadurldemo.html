@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InAppBrowser.addEventListener Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+   
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
+    var ref=null; 
+    function loadStart(){
+      alert("loadstart");
+      alert(event.type + ' - ' + event.url);
+    }
+    function loadStop(){
+      alert(event.type + ' - ' + event.url);
+    }
+    function loadError(){
+      alert(event.type + ' - ' + event.message);
+    }
+    function loadClose(){
+      alert(event.type);
+         ref.removeEventListener('loadstart', iabLoadStart);
+         ref.removeEventListener('loadstop', iabLoadStop);
+         ref.removeEventListener('loaderror', iabLoadError);
+         ref.removeEventListener('exit', iabClose);
+    }
+    function loadUrl(){
+      var element = document.getElementById('state');
+         element.innerHTML='device is ready';
+         var ref = window.open('http://www.baidu.com', '_blank', 'location=yes','closebuttoncaption=yes');
+         ref.addEventListener('loadstart', loadStart );
+         ref.addEventListener('loadstop', loadStop);
+         ref.addEventListener('loaderror', loadError);
+         ref.addEventListener('exit', loadClose);
+         // 延时5秒后关闭浏览器
+         setTimeout(function() {
+             ref.close(); //关闭浏览器
+         }, 5000);
+         alert("function over");
+    }
+    
+    /**官方demo走不通*
+    function onDeviceReady() {
+         var element = document.getElementById('state');
+         element.innerHTML='device is ready';
+         alert("device is ok");
+         var ref = window.open('http://www.baidu.com', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+         alert("load over ");
+    }
+    */
+    </script>
+  </head>
+  <body>
+    <p id="state">Finding geolocation...</p>
+    <button onclick="loadUrl()">加载网页</button>
+    
+  </body>
+</html>

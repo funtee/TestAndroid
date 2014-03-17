@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>5</title>
+   <link rel="stylesheet" type="text/css" href="css/different.css" />
+   <script type="text/javascript" src="js/jquery.js"></script>   
+   <script type="text/javascript" src="js/common.js"></script> 
+   <script type="text/javascript"> 
+   	var i = timecount;
+	var flag1 = false;
+	var flag2 = false;
+	var flag3 = false;
+    window.onload =function() {
+		gamestart();
+    }
+	
+	function getRandomNum(min,max)
+	{
+		var range = max - min;
+		var rand = Math.random();
+		return (min + Math.round(rand * range));
+	}	
+	
+	function gamestart()
+	{
+		var h = 0;
+		setInterval(function(){                
+			if(flag1 && flag2 && flag3)
+			{
+				var page = "";
+				var pagename =  getRandomNum(1,count);
+				if (pagename != document.title)
+				{
+					page += pagename+".html";
+					window.location.loadhrefaction="ts_mover_right_to_left";
+					window.location = page;					
+				}							
+			}
+			if(i < 0)
+			{
+				document.getElementById("time").style.width= "275px";
+				showfailure();
+			}
+			h = 275-i*4.58;
+			if (i>=0) document.getElementById("time").style.width= h+"px";			
+			i--;
+		},1000);	
+	}
+   
+	function showfailure()
+	{
+		$("#failure").fadeIn("slow");		
+	}
+	
+	function hidefailure()
+	{
+		//$("#failure").fadeOut("slow");
+		setTimeout("location.reload(location.href)",1000); 
+	}	   
+	
+	function showwrong()
+	{
+		$("#no").fadeIn("slow");
+		setTimeout("hidewrong()",1000); 		
+	}
+	
+	function hidewrong()
+	{
+		i = i-5;
+		$("#no").fadeOut("slow");
+	}
+	
+	function showok1()
+	{
+		$("#ok1").fadeIn("slow");
+		flag1 = true;	
+	}
+	function showok2()
+	{
+		$("#ok2").fadeIn("slow");
+		flag2 = true;	
+	}
+	function showok3()
+	{
+		$("#ok3").fadeIn("slow");
+		flag3 = true;	
+	}
+	
+	function f()
+	{
+		window.location.loadhrefaction="ts_mover_left_to_right";window.location = "index.html";
+	} 
+	document.onkeysoft2 = f;	
+	
+   </script>         
+ </head>
+ <body>
+<div class="different">
+	<div class="diff_game">
+	  <div class="game_left">
+	    <div class="game_l">
+				<img src="images/img005L.jpg" alt="找不同" border="0" usemap="#Map"/>
+				<map name="Map" id="Map">
+					<area shape="circle" coords="189,31,20" href="javascript:void(0);" onclick="showok1()"/>
+					<area shape="circle" coords="119,195,20" href="javascript:void(0);" onclick="showok2()"/>
+					<area shape="circle" coords="55,24,20" href="javascript:void(0);" onclick="showok3()"/>
+					<area shape="rect" coords="3,3,37,214" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="rect" coords="75,3,169,176" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="rect" coords="209,3,304,215" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="rect" coords="36,46,75,214" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="rect" coords="168,51,209,215" href="javascript:void(0);" onclick="showwrong()"/>
+				</map>
+
+	    </div>
+			<div class="game_l">
+				<img src="images/img005R.jpg" alt="找不同" border="0" usemap="#MapMap"/>
+				<map name="MapMap" id="MapMap">
+					<area shape="rect" coords="209,3,304,215" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="rect" coords="168,51,209,215" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="rect" coords="75,3,169,176" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="rect" coords="36,46,75,214" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="rect" coords="3,3,37,214" href="javascript:void(0);" onclick="showwrong()"/>
+					<area shape="circle" coords="189,31,20" href="javascript:void(0);" onclick="showok1()"/>
+					<area shape="circle" coords="119,195,20" href="javascript:void(0);" onclick="showok2()"/>
+					<area shape="circle" coords="55,24,20" href="javascript:void(0);" onclick="showok3()"/>
+				</map>
+			</div>
+				<a href="javascript:void(0);" class="ok" id="ok1" style="display:none;position:absolute;left:170px;bottom:400px;"></a>
+				<a href="javascript:void(0);" class="ok" id="ok2" style="display:none;position:absolute;left:100px;bottom:240px;"></a>
+				<a href="javascript:void(0);" class="ok" id="ok3" style="display:none;position:absolute;left:40px;bottom:410px;"></a>
+				<a href="javascript:void(0);" class="no" id="no" style="display:none;"></a>		
+	  </div>
+		<div class="game_right">
+			<a href="javascript:void(0);" class="exit" onclick="f()"></a>
+			<div class="game_r_top">
+				<p id="time"></p>
+			</div>
+		</div>
+		
+		<div id="failure" style="display:none;">
+			<div class="tanc"></div>
+			<div class="fail">
+				<img src="images/fail.png" alt="游戏失败"/>
+			</div>
+			<a href="javascript:void(0);" class="play_again" onclick="hidefailure()"></a>
+		</div>	
+	</div>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+ <item  
+        android:title="单选菜单组" 
+        android:icon="@drawable/ic_launcher">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/meun1" android:title="菜单1"/>
+                 <item android:id="@+id/meun2" android:title="菜单2"/>
+                  <item android:id="@+id/meun3" android:title="菜单3"/>
+                   <item android:id="@+id/meun4" android:title="菜单4"/>               
+            </group>           
+        </menu>
+    </item>
+    <item android:id="@+id/menu5"
+        android:title="菜单5"
+        ></item>
+      <item  
+        android:title="多选菜单组" 
+        android:icon="@drawable/ic_launcher">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/meun6" android:title="菜单1"/>
+                 <item android:id="@+id/meun7" android:title="菜单2"/>
+                  <item android:id="@+id/meun8" android:title="菜单3"/>
+                   <item android:id="@+id/meun9" android:title="菜单4"/>               
+            </group>           
+        </menu>
+    </item>
+
+</menu>

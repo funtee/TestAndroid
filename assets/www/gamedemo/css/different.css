@@ -1,0 +1,21 @@
+body,p,div,ul,ol,li,dl,dt,dd,span,var,em,a,img,strong,table,td,tr,h2,h3,h4,h5{font-family: Arial, Helvetica, sans-serif;font-family:微软雅黑;margin:0;padding:0;font-size:16px;}
+a img{border:none;}
+ul,ol{list-style-type:none;}
+.clear{height:0;clear:both;}
+a{text-decoration:none;}
+var,em{font-style:normal;font-weight:noraml;}
+.different{width:320px;height:480px;position:relative;}
+.diff{width:320px;height:480px;background:url(../images/index.jpg) 0 0 no-repeat;}
+.play{background:url(../images/play.png) 0 0 no-repeat;height:127px;width:65px;display:block;position:absolute;left:20px;bottom:13px;}
+.diff_game{background:#7db8f9;width:320px;height:480px;}
+.game_left{padding:0 4px;float:left;position:relative;}
+.game_l{margin:3px 0 5px 0;border:3px solid #000;width:306px;height:216px;float:left;}
+.game_r_top{background:url(../images/bj_plan.png) 0 0 no-repeat;height:20px;width:275px;float:left;}
+.game_right{float:left;}
+.exit{background:url(../images/exit.png) 0 0 no-repeat;height:20px;width:45px;display:block;float:left;}
+.game_r_top p{background:url(../images/plan.png) 0 0 no-repeat;height:20px;float:right;}
+.ok{background:url(../images/ok.png) 0 0 no-repeat;height:46px;width:46px;}
+.no{background:url(../images/no.png) 0 0 no-repeat;height:79px;width:79px;position:absolute;left:120px;bottom:70px;}
+.tanc{width:320px;height:480px;background:#000;opacity:0.5;filter:alpha(opacity=50);position:absolute;left:0;top:0;}
+.fail {position:absolute;left:130px;top:80px;}
+.play_again{background:url(../images/play_again.png) 0 0 no-repeat;height:169px;width:66px;display:block;position:absolute;left:20px;bottom:13px;}
